@@ -95,7 +95,66 @@
 # # Regular python read file----------------------------------
 # infile = open('input.txt', 'r')
 # for word in infile:
-# for word in infile:
 #     word = word.rstrip().replace(",", "").split(";")  # strip removes newline, replace commas with empty string, then split at ; to create list of elements
 # infile.close()
 
+# string = f.readfile()   # returns NEXT LINE of text from input file 
+
+## common exceptions to raise ---------------------------------
+# IndexError --> raised when index of sequence is out of range
+# KeyError --> when a key is not found in a dictionary
+# ValueError --> raised when a func gets argument of correct type but improper value
+# ZeroDivisionError --> raised when second operand of division or modulo operation is zero
+
+## sets -----------------------------------------------------
+# random = set()  # empty set
+# random = {"haha", "wtf", "oops"}  # set w/ initial elements 
+# what = {"wtf", "12323"}
+# random.add("lol")  # sets are mutable 
+# random.discard("haha") --> random = {"wtf", "oops", "lol"}
+# unionzedStuff = random.union(what)  # duplicates removed 
+# print(random.difference(what))
+# print(random.intersection(what))
+
+# can set contain other sets or dictionaries or lists?
+# print(set().add([[0, 1, 2]])) # Cannot contain other dictionaries or lists
+def drive():
+    print("The car is moving.")
+
+
+class Car:
+    def __init__(self, make, model, year):
+        self.make = make
+        self.model = model
+        self.year = year
+        # Fuel capacity and level in gallons.
+        self.fuel_capacity = 15
+        self.fuel_level = 0
+
+    def fill_tank(self):
+        self.fuel_level = self.fuel_capacity
+
+    print("Fuel tank is full.")
+
+
+my_car = Car('audi', 'a4', 2016)
+print(my_car.make)
+print(my_car.model)
+print(my_car.year)
+
+my_car = Car('audi', 'a4', 2016)
+my_old_car = Car('subaru', 'outback', 2013)
+my_truck = Car('toyota', 'tacoma', 2010)
+
+class ElectricCar(Car):
+    def __init__(self, make, model, year):
+        super().__init__(make, model, year)
+        self.battery_size = 70
+        self.charge_level = 0
+
+    def charge(self):
+        self.charge_level = 100
+        print("The vehicle is fully charged.")
+
+my_ecar = ElectricCar('tesla', 'model s', 2016)
+my_ecar.charge()
