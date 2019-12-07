@@ -1,0 +1,101 @@
+## print(7/4) --> returns 1.75
+## print(7//4) --> returns 1; floor division
+## print(7 % 4) --> returns 3; modulo returns remainder
+
+## formatting:
+# ----------> use %d with an integer
+# ----------> use %f with floating-point number
+# ----------> use %s with string
+
+## formatting: left justify number w/ nine decimal places
+# print('%-9.9f' % 123.456) --> returns 123.456000000
+## formatting: right justify number w/ 1 decimal places even if original float has 2 decimal places
+# print('%04.1f' % 75.55) --> returns 75.5
+
+## using multiple formatting
+# print('Hello %s %d %s' % ('my name is Jared I\'m', 19, 'and I never fucking learned how to read.'))
+
+#print(list('i\'m gonna fail'))  # List of characters --> ['i', "'", 'm', ' ', 'g', 'o', 'n', 'n', 'a', ' ', 'f', 'a', 'i', 'l']
+#print(['i\'m', 'gonna', 'fail'][-3]) # returns third last character (or first in this case) "i'm"
+
+## strings are compared in lexicographical order
+# 1. All UPPERCASE letters come before lowercase
+# 2. space’ comes before all other printable characters
+# 3. Digits (0‐9) come before all letters
+
+
+## conditional testing w/ lists and if statments 
+#         banned_users = ['bob', 'emily', 'ash']
+#         user = 'emily'
+#         if user not in banned_users:
+#             print("You can play!")
+
+## operations for testing substrings --------------------------------------
+#  random = "hello what am i doing"
+#     print(random.count("o")) --> returns 2
+#     print(random.endswith("g")) --> returns True
+#     print(random.find("o")) --> returns 4 (first "o" to appear at index 4) 
+
+## methods for testing string characterisitics -----------------------------------------
+## random = 1232a
+#     print(random.isalnum()) --> returns True (tests if string = only letters or digits)
+#     print(random.isdigit()) -> returns False (tests if string = only digits)
+#     print(random.isalpha()) --> returns False (tests if string = all letters) 
+ 
+# for i in range(3):
+#     print(i)
+#     # break
+# else:
+#     print('does this run?')
+
+# for i in range(3):
+#   for j in range(4):
+#     print("*", end=")  
+#   print()                #prints 3 ROWS of 4 asteisks each (so i = # of rows and j = # of asterisks) 
+
+# some_list = ['string', 'lol', 2, 3, 0]
+# some_list.sort() # Raises TypeError -> '<' not supported between instances of int and str
+# print(some_list)
+
+## list slicing -------------------------------------------
+# a[start:stop]  # items start through stop-1
+# a[start:]      # items start through the rest of the array
+# a[:stop]       # items from the beginning through stop-1
+# a[:]           # a copy of the whole array
+# a[start:stop:step] # start through not past stop, by step
+# a[-1]    # last item in the array
+# a[-2:]   # last two items in the array
+# a[:-2]   # everything except the last two items
+# a[::-1]    # all items in the array, reversed
+# a[1::-1]   # the first two items, reversed
+# a[:-3:-1]  # the last two items, reversed
+# a[-3::-1]  # everything except the last two items, reversed
+
+# # membership operator in tuple-----------------------------------
+# print(10 in ('lol', 23, 'wow', 10))
+
+# reversal of list, dictionary, tuple, set-----------------------------------
+# some_reverse = reversed([1, 2, 3])
+# print(some_reverse)
+# for i in some_reverse:
+#     print(i)
+# some_reverse = reversed(['lol what', 2, 1e3, 'hehe'])
+# print(some_reverse)
+# for i in some_reverse:
+#     print(i)
+
+# def build_person(first, last):
+#    """Return a dictionary of information about a person."""
+#    person = {'first': first, 'last': last}
+#    return person
+#
+# musician = build_person('jimi', 'hendrix')
+# print(musician)
+
+# # Regular python read file----------------------------------
+# infile = open('input.txt', 'r')
+# for word in infile:
+# for word in infile:
+#     word = word.rstrip().replace(",", "").split(";")  # strip removes newline, replace commas with empty string, then split at ; to create list of elements
+# infile.close()
+
